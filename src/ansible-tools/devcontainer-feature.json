@@ -1,0 +1,61 @@
+{
+    "name": "Ansible Tools",
+    "id": "ansible-tools",
+    "version": "1.0.0",
+    "description": "Installs Ansible CLI and related tools like ansible-builder, ansible-galaxy, ansible-lint, etc.",
+    "options": {
+        "ansibleVersion": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "9.0.0",
+                "8.6.1",
+                "8.5.0",
+                "7.7.0"
+            ],
+            "default": "latest",
+            "description": "Select or enter an Ansible Core version"
+        },
+        "ansibleBuilderVersion": {
+            "type": "string",
+            "proposals": [
+                "none",
+                "latest",
+                "3.0.0",
+                "2.0.0",
+                "1.2.0"
+            ],
+            "default": "latest",
+            "description": "Select or enter an ansible-builder version, or 'none' to skip installation"
+        },
+        "ansibleLintVersion": {
+            "type": "string",
+            "proposals": [
+                "none",
+                "latest",
+                "6.22.0",
+                "6.21.1",
+                "6.20.0"
+            ],
+            "default": "latest",
+            "description": "Select or enter an ansible-lint version, or 'none' to skip installation"
+        },
+        "ansibleNavigatorVersion": {
+            "type": "string",
+            "proposals": [
+                "none",
+                "latest",
+                "3.0.0",
+                "2.0.0"
+            ],
+            "default": "none",
+            "description": "Select or enter an ansible-navigator version, or 'none' to skip installation"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/python"
+    ],
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/python:1": {}
+    }
+}

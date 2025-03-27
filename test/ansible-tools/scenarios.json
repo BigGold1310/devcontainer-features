@@ -1,0 +1,35 @@
+{
+    "specific_version": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/python:1": {},
+            "ansible-tools": {
+                "ansibleVersion": "8.5.0"
+            }
+        }
+    },
+    "all_tools": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/python:1": {},
+            "ansible-tools": {
+                "ansibleVersion": "latest",
+                "ansibleBuilderVersion": "latest",
+                "ansibleLintVersion": "latest",
+                "ansibleNavigatorVersion": "latest"
+            }
+        }
+    },
+    "minimal": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/python:1": {},
+            "ansible-tools": {
+                "ansibleVersion": "latest",
+                "ansibleBuilderVersion": "none",
+                "ansibleLintVersion": "none",
+                "ansibleNavigatorVersion": "none"
+            }
+        }
+    }
+}
